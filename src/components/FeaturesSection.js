@@ -9,6 +9,7 @@ import { emphasize } from "@material-ui/core/styles/colorManipulator";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
 import AspectRatio from "components/AspectRatio";
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {

@@ -12,6 +12,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import { makeStyles } from "@material-ui/core/styles";
 import Section from "components/Section";
 import { useDarkMode } from "util/theme";
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   sticky: {
@@ -66,7 +67,7 @@ function Footer(props) {
           <Grid item={true} xs={12} md={4}>
             <Link href="/">
               <a>
-                <img src={logo} alt="Logo" className={classes.brand} />
+                <Image src={logo} alt="Logo" className={classes.brand} />
               </a>
             </Link>
 

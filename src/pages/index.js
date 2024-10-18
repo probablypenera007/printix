@@ -12,8 +12,8 @@ function IndexPage(props) {
       <HeroSection
         bgColor="primary"
         size="large"
-        // bgImage="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&h=800&q=80"
-        bgImage="https://unsplash.com/photos/assorted-wood-stamps-OhJmwB4XWLE"
+        bgImage="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&h=800&q=80"
+        // bgImage="https://unsplash.com/photos/assorted-wood-stamps-OhJmwB4XWLE"
         bgImageOpacity={0.3}
         title="Printix.AE"
         subtitle="Printix AE Subtitle"

@@ -21,6 +21,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Section from "components/Section";
 import { useAuth } from "util/auth";
 import { useDarkMode } from "util/theme";
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   logo: {
@@ -65,7 +66,7 @@ function Navbar(props) {
           <Toolbar>
             <Link href="/">
               <a>
-                <img src={logo} alt="Logo" className={classes.logo} />
+              <Image src={logo} alt="Logo" className={classes.logo} width={100} height={25} />
               </a>
             </Link>
             <div className={classes.spacer} />
