@@ -12,10 +12,11 @@ function IndexPage(props) {
       <HeroSection
         bgColor="primary"
         size="large"
-        bgImage="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&h=800&q=80"
+        // bgImage="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&h=800&q=80"
+        bgImage="https://unsplash.com/photos/assorted-wood-stamps-OhJmwB4XWLE"
         bgImageOpacity={0.3}
-        title="Your landing page title here"
-        subtitle="This landing page is perfect for showing off your awesome product and driving people to sign up for a paid plan."
+        title="Printix.AE"
+        subtitle="Printix AE Subtitle"
         buttonText="Get Started"
         buttonColor="default"
         buttonPath="/pricing"
