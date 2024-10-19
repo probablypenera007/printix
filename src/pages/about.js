@@ -14,7 +14,7 @@ function AboutPage(props) {
         size="large"
         bgImage=""
         bgImageOpacity={1}
-        title="We help you make money"
+        title="Printix.AE"
         subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo, corporis totam!"
       />
       <StatsSection

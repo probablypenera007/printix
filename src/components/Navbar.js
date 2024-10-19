@@ -81,13 +81,13 @@ function Navbar(props) {
               </IconButton>
             </Hidden>
             <Hidden xsDown={true} implementation="css">
-              {!auth.user && (
+              {/* {!auth.user && (
                 <Link href="/auth/signin" passHref={true}>
                   <Button component="a" color="inherit">
                     Sign in
                   </Button>
                 </Link>
-              )}
+              )} */}
 
               {auth.user && (
                 <>

@@ -7,6 +7,7 @@ import { ThemeProvider } from "util/theme";
 import { QueryClientProvider } from "util/db";
 import lightmodelogo from "../assets/logo_lightmode.png"
 import darkmodelogo from "../assets/logo_darkmode.png"
+import { LanguageProvider } from "contexts/languageContext";
 
 //https://imgur.com/a/wNpLH8J darkmode
 // https://imgur.com/a/Cis24Yu  lightmode
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider>
       <ThemeProvider>
+      <LanguageProvider> 
         <Chat />
         <>
           <Navbar
@@ -38,6 +40,7 @@ function MyApp({ Component, pageProps }) {
             sticky={true}
           />
         </>
+        </LanguageProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );
