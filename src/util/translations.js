@@ -35,6 +35,7 @@ export const translations = {
       sustainability: "Our Commitment to Sustainability: We are dedicated to reducing our environmental footprint. Using non-toxic vegan inks, we offer an eco-friendly alternative to traditional printing methods, with a process that produces no waste or harmful emissions. By choosing Printix, you not only get stunning wall designs but also support a sustainable future.",
   
       faqTitle: "Frequently Asked Questions",
+      faqFooterTitle: "FAQ",
       faqQuestion1: "What surfaces can you print on?",
       faqAnswer1: "We can print on nearly any vertical surface, including walls, bricks, tiles, glass, leather, and plasterboard.",
       faqQuestion2: "Is your printing eco-friendly?",
@@ -77,7 +78,14 @@ export const translations = {
       legalLiability: "Service Liability: Printix takes all precautions to ensure high-quality prints. However, we are not liable for damages to surfaces that are improperly prepared or unsuitable for printing. It is the client’s responsibility to ensure walls are clean, dry, and structurally sound before printing.",
       legalPayment: "Payment: Payment is due upon project completion unless otherwise agreed upon in writing. All prices are subject to VAT where applicable.",
       legalCancellations: "Cancellations and Refunds: Clients can cancel or reschedule services with a minimum of 48 hours’ notice. Refunds are not guaranteed for cancellations made after this period.",
-      legalPrivacy: "Privacy Policy: All personal information collected is strictly confidential and will not be shared with third parties. We use data only to enhance your experience and improve our services."
+      legalPrivacy: "Privacy Policy: All personal information collected is strictly confidential and will not be shared with third parties. We use data only to enhance your experience and improve our services.",
+      
+      footerProductTtile: "Product",
+      footerCompanyTitle: "Company",
+      footerContactTitle: "Contact",
+      footerTermsTitle: "Terms and Condition",
+      footerDescription: "Revolutionizing wall printing with eco-friendly solutions for homes, offices, and commercial spaces. Durable, precise results on any surface.",
+
     },
   
     ar: {
@@ -117,6 +125,7 @@ export const translations = {
       sustainability: "التزامنا بالاستدامة: نحن ملتزمون بتقليل بصمتنا البيئية. باستخدام أحبار نباتية غير سامة، نقدم بديلاً صديقًا للبيئة لطرق الطباعة التقليدية، بعملية لا تنتج أي نفايات أو انبعاثات ضارة. باختيارك لـ Printix، لا تحصل فقط على تصاميم جدارية مذهلة، بل تساهم أيضًا في مستقبل مستدام.",
   
       faqTitle: "الأسئلة الشائعة",
+      faqFooterTitle: "الأسئلة الشائعة",
       faqQuestion1: "على أي الأسطح يمكن الطباعة؟",
       faqAnswer1: "يمكننا الطباعة على معظم الأسطح الرأسية، بما في ذلك الجدران، الطوب، البلاط، الزجاج، الجلد، والجبس.",
       faqQuestion2: "هل طباعة Printix صديقة للبيئة؟",
@@ -162,6 +171,12 @@ export const translations = {
       legalLiability: "مسؤولية الخدمة: تأخذ Printix جميع الاحتياطات اللازمة لضمان جودة الطباعة. ومع ذلك، فإننا لسنا مسؤولين عن الأضرار التي قد تلحق بالأسطح التي لم تتم تهيئتها بشكل صحيح أو غير المناسبة للطباعة. يجب على العميل ضمان نظافة وجفاف الجدران وصلاحيتها قبل الطباعة.",
       legalPayment: "الدفع: يتم الدفع عند اكتمال المشروع ما لم يتم الاتفاق على غير ذلك كتابيًا. جميع الأسعار تخضع لضريبة القيمة المضافة عند الاقتضاء.",
       legalCancellations: "الإلغاء والاسترداد: يمكن للعملاء إلغاء أو إعادة جدولة الخدمات مع إشعار مسبق لا يقل عن 48 ساعة. لا يتم ضمان استرداد الأموال في حالة الإلغاء بعد هذه الفترة.",
-      legalPrivacy: "سياسة الخصوصية: جميع المعلومات الشخصية التي يتم جمعها تظل سرية تمامًا ولن يتم مشاركتها مع أطراف ثالثة. نستخدم البيانات فقط لتعزيز تجربتك وتحسين خدماتنا."
+      legalPrivacy: "سياسة الخصوصية: جميع المعلومات الشخصية التي يتم جمعها تظل سرية تمامًا ولن يتم مشاركتها مع أطراف ثالثة. نستخدم البيانات فقط لتعزيز تجربتك وتحسين خدماتنا.",
+   
+      footerProductTitle: "المنتج",
+      footerCompanyTitle: "الشركة",
+      footerContactTitle: "التواصل",
+      footerTermsTitle: "الشروط والأحكام",
+      footerDescription: "نحدث ثورة في الطباعة على الجدران بحلول صديقة للبيئة للمنازل والمكاتب والمساحات التجارية. نتائج متينة ودقيقة على أي سطح.",
     }
   };

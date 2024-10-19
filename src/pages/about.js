@@ -4,8 +4,10 @@ import HeroSection2 from "components/HeroSection2";
 import StatsSection from "components/StatsSection";
 import TeamBiosSection from "components/TeamBiosSection";
 import CtaSection from "components/CtaSection";
+import { useLanguage } from "contexts/languageContext";
 
 function AboutPage(props) {
+  const {t} = useLanguage()
   return (
     <>
       <Meta title="About" description="Learn about our company and team" />
@@ -36,7 +38,7 @@ function AboutPage(props) {
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        title="Ready to get started?"
+        title={t.contactTitle}
         subtitle=""
         buttonText="Get Started"
         buttonColor="default"

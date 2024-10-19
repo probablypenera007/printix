@@ -46,9 +46,9 @@ function IndexPage(props) {
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        title="Ready to get started?"
+        title={t.contactTitle}
         subtitle=""
-        buttonText="Get Started"
+        buttonText={t.getStarted}
         buttonColor="default"
         buttonPath="/pricing"
       />

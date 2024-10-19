@@ -83,7 +83,7 @@ function Footer(props) {
             <div className={classes.legal}>
               {props.copyright}
               <Link href="/legal/terms-of-service" passHref={true}>
-                <LinkMui>Terms</LinkMui>
+                <LinkMui>{t.footerTermsTitle}</LinkMui>
               </Link>
               {/* <Link href="/legal/privacy-policy" passHref={true}>
                 <LinkMui>Privacy</LinkMui>
@@ -99,7 +99,7 @@ function Footer(props) {
                       variant="overline"
                       className={classes.listItemTextHeader}
                     >
-                      Product
+                      {t.productTitle}
                     </Typography>
                   </ListItem>
                   <Link href="/pricing" passHref={true}>
@@ -108,7 +108,7 @@ function Footer(props) {
                       button={true}
                       className={classes.listItem}
                     >
-                      <ListItemText>Pricing</ListItemText>
+                      <ListItemText>{t.pricingTitle}</ListItemText>
                     </ListItem>
                   </Link>
                   <Link href="/faq" passHref={true}>
@@ -117,7 +117,7 @@ function Footer(props) {
                       button={true}
                       className={classes.listItem}
                     >
-                      <ListItemText>FAQ</ListItemText>
+                      <ListItemText>{t.faqFooterTitle}</ListItemText>
                     </ListItem>
                   </Link>
                 </List>
@@ -129,7 +129,7 @@ function Footer(props) {
                       variant="overline"
                       className={classes.listItemTextHeader}
                     >
-                      Company
+                      {t.footerCompanyTitle}
                     </Typography>
                   </ListItem>
                   {/* <Link href="/about" passHref={true}>
@@ -147,10 +147,10 @@ function Footer(props) {
                       button={true}
                       className={classes.listItem}
                     >
-                      <ListItemText>Contact</ListItemText>
+                      <ListItemText>{t.footerContactTitle}</ListItemText>
                     </ListItem>
                   </Link>
-                  <ListItem
+                  {/* <ListItem
                     button={true}
                     component="a"
                     href="https://medium.com"
@@ -159,7 +159,7 @@ function Footer(props) {
                     className={classes.listItem}
                   >
                     <ListItemText>Blog</ListItemText>
-                  </ListItem>
+                  </ListItem> */}
                 </List>
               </Grid>
               <Grid item={true} xs={12} md={4}>
