@@ -36,9 +36,9 @@ function AuthFooter(props) {
                 <LinkMui>Terms of Service</LinkMui>
               </Link>{" "}
               and{" "}
-              <Link href={props.privacyPolicyPath} passHref={true}>
+              {/* <Link href={props.privacyPolicyPath} passHref={true}>
                 <LinkMui>Privacy Policy</LinkMui>
-              </Link>
+              </Link> */}
               .
             </Box>
           )}

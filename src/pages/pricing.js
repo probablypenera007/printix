@@ -1,18 +1,20 @@
 import React from "react";
 import Meta from "components/Meta";
 import PricingSection from "components/PricingSection";
+import { useLanguage } from "contexts/languageContext";
 
 function PricingPage(props) {
+  const {t} = useLanguage()
   return (
     <>
-      <Meta title="Pricing" />
+      <Meta title={t.pricingTitle} />
       <PricingSection
         bgColor="default"
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        title="Pricing"
-        subtitle="Choose the plan that makes sense for you. All plans include a 14-day free trial."
+        title={t.pricingTitle}
+        subtitle={t.pricingSubtitle}
       />
     </>
   );

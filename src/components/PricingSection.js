@@ -9,13 +9,13 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import CheckIcon from "@material-ui/icons/Check";
-import ListItemText from "@material-ui/core/ListItemText";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
 import { useAuth } from "util/auth";
+import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -44,48 +44,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function PricingSection(props) {
+  const { t } = useLanguage(); // Access the translations
   const classes = useStyles();
-
   const auth = useAuth();
-
-  const plans = [
-    {
-      id: "starter",
-      name: "Starter",
-      price: "10",
-      perks: [
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-        "Integer molestie lorem at massa",
-      ],
-    },
-    {
-      id: "pro",
-      name: "Pro",
-      price: "20",
-      perks: [
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-        "Integer molestie lorem at massa",
-        "Faucibus porta lacus fringilla vel",
-        "Aenean sit amet erat nunc",
-      ],
-    },
-    {
-      id: "business",
-      name: "Business",
-      price: "50",
-      perks: [
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-        "Integer molestie lorem at massa",
-        "Faucibus porta lacus fringilla vel",
-        "Aenean sit amet erat nunc",
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-      ],
-    },
-  ];
 
   return (
     <Section
@@ -96,78 +57,158 @@ function PricingSection(props) {
     >
       <Container>
         <SectionHeader
-          title={props.title}
-          subtitle={props.subtitle}
+          title={t.pricingTitle} // "Pricing"
+          subtitle={t.pricingSubtitle} // "Affordable Wall Printing for Every Project Size"
           size={4}
           textAlign="center"
         />
+
+        <Typography variant="body1" align="center" margin-left="40" paragraph>
+          {t.pricingDescription} {/* "At Printix, we offer competitive pricing..." */}
+        </Typography>
+
         <Grid container={true} justifyContent="center" spacing={4}>
-          {plans.map((plan, index) => (
-            <Grid item={true} xs={12} md={4} key={index}>
-              <Card className={classes.card}>
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="h6" component="h2">
-                    {plan.name}
-                  </Typography>
-                  <Box className={classes.price} mt={1}>
-                    <Typography variant="h3">${plan.price}</Typography>
-                    <Typography variant="h4" color="textSecondary">
-                      /mo
-                    </Typography>
-                  </Box>
+          {/* Plan 1 */}
+          <Grid item={true} xs={12} md={4}>
+            <Card className={classes.card}>
+              <CardContent className={classes.cardContent}>
+                <Typography variant="h6" component="h2">
+                  {t.price1Title} {/* "1-2 sq meters" */}
+                </Typography>
+                <Box className={classes.price} mt={1}>
+                  <Typography variant="h3">{t.price1Price}</Typography>
+                </Box>
 
-                  {plan.description && (
-                    <Box mt={2}>
-                      <Typography component="p" color="textSecondary">
-                        {plan.description}
-                      </Typography>
-                    </Box>
-                  )}
+                <List aria-label="perks">
+                  <ListItem className={classes.listItem} disableGutters={true}>
+                    <ListItemIcon className={classes.perkIcon}>
+                      <CheckIcon />
+                    </ListItemIcon>
+                    <Typography variant="body2">{t.price1Perks}</Typography>
+                  </ListItem>
+                </List>
 
-                  {plan.perks && (
-                    <Box mt={1}>
-                      <List aria-label="perks">
-                        {plan.perks.map((perk, index) => (
-                          <ListItem
-                            className={classes.listItem}
-                            disableGutters={true}
-                            key={index}
-                          >
-                            <ListItemIcon className={classes.perkIcon}>
-                              <CheckIcon />
-                            </ListItemIcon>
-                            <ListItemText>{perk}</ListItemText>
-                          </ListItem>
-                        ))}
-                      </List>
-                    </Box>
-                  )}
-
-                  <Box mt="auto" pt={3}>
-                    <Link
-                      href={
-                        auth.user
-                          ? `/purchase/${plan.id}`
-                          : `/auth/signup?next=/purchase/${plan.id}`
-                      }
-                      passHref={true}
+                <Box mt="auto" pt={3}>
+                  <Link
+                    href={
+                      auth.user
+                        ? `/purchase/plan1`
+                        : `/auth/signup?next=/purchase/plan1`
+                    }
+                    passHref={true}
+                  >
+                    <Button
+                      component="a"
+                      variant="contained"
+                      color="primary"
+                      size="large"
+                      fullWidth={true}
                     >
-                      <Button
-                        component="a"
-                        variant="contained"
-                        color="primary"
-                        size="large"
-                        fullWidth={true}
-                      >
-                        Choose
-                      </Button>
-                    </Link>
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
+                      {t.getStarted} {/* "Get Started" */}
+                    </Button>
+                  </Link>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Plan 2 */}
+          <Grid item={true} xs={12} md={4}>
+            <Card className={classes.card}>
+              <CardContent className={classes.cardContent}>
+                <Typography variant="h6" component="h2">
+                  {t.price2Title} {/* "2-4 sq meters" */}
+                </Typography>
+                <Box className={classes.price} mt={1}>
+                  <Typography variant="h3">{t.price2Price}</Typography>
+                </Box>
+
+                <List aria-label="perks">
+                  <ListItem className={classes.listItem} disableGutters={true}>
+                    <ListItemIcon className={classes.perkIcon}>
+                      <CheckIcon />
+                    </ListItemIcon>
+                    <Typography variant="body2">{t.price2Perks}</Typography>
+                  </ListItem>
+                </List>
+
+                <Box mt="auto" pt={3}>
+                  <Link
+                    href={
+                      auth.user
+                        ? `/purchase/plan2`
+                        : `/auth/signup?next=/purchase/plan2`
+                    }
+                    passHref={true}
+                  >
+                    <Button
+                      component="a"
+                      variant="contained"
+                      color="primary"
+                      size="large"
+                      fullWidth={true}
+                    >
+                      {t.getStarted} {/* "Get Started" */}
+                    </Button>
+                  </Link>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Plan 3 */}
+          <Grid item={true} xs={12} md={4}>
+            <Card className={classes.card}>
+              <CardContent className={classes.cardContent}>
+                <Typography variant="h6" component="h2">
+                  {t.price3Title} {/* "4-6 sq meters" */}
+                </Typography>
+                <Box className={classes.price} mt={1}>
+                  <Typography variant="h3">{t.price3Price}</Typography>
+                </Box>
+
+                <List aria-label="perks">
+                  <ListItem className={classes.listItem} disableGutters={true}>
+                    <ListItemIcon className={classes.perkIcon}>
+                      <CheckIcon />
+                    </ListItemIcon>
+                    <Typography variant="body2">{t.price3Perks}</Typography>
+                  </ListItem>
+                </List>
+
+                <Box mt="auto" pt={3}>
+                  <Link
+                    href={
+                      auth.user
+                        ? `/purchase/plan3`
+                        : `/auth/signup?next=/purchase/plan3`
+                    }
+                    passHref={true}
+                  >
+                    <Button
+                      component="a"
+                      variant="contained"
+                      color="primary"
+                      size="large"
+                      fullWidth={true}
+                    >
+                      {t.getStarted} {/* "Get Started" */}
+                    </Button>
+                  </Link>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
+
+        <Box mt={4}>
+          <Typography variant="body2" align="center">
+            {t.priceNote} {/* "For projects larger than 6 sq meters..." */}
+          </Typography>
+          <Typography variant="body2" align="center">
+            {t.priceDisclaimer} {/* "Prices include consultation..." */}
+          </Typography>
+        </Box>
       </Container>
     </Section>
   );

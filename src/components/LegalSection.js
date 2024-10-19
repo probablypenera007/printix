@@ -43,13 +43,13 @@ function LegalSection(props) {
         >
           <Tab component="a" label="Terms of Service" />
         </Link>
-        <Link
+        {/* <Link
           href="/legal/privacy-policy"
           passHref={true}
           value="privacy-policy"
         >
           <Tab component="a" label="Privacy Policy" />
-        </Link>
+        </Link> */}
       </Tabs>
       <Box mt={5}>
         <Container>

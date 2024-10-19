@@ -7,8 +7,10 @@ import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { useForm } from "react-hook-form";
 import contact from "util/contact";
+import { useLanguage } from "contexts/languageContext";
 
 function Contact(props) {
+  const { t } = useLanguage();
   const [pending, setPending] = useState(false);
   const [formAlert, setFormAlert] = useState(null);
   const { handleSubmit, register, errors, reset } = useForm();
@@ -56,7 +58,7 @@ function Contact(props) {
               <TextField
                 variant="outlined"
                 type="text"
-                label="Name"
+                label={t.name}
                 name="name"
                 error={errors.name ? true : false}
                 helperText={errors.name && errors.name.message}
@@ -72,7 +74,7 @@ function Contact(props) {
             <TextField
               variant="outlined"
               type="email"
-              label="Email"
+              label={t.enterEmail}
               name="email"
               error={errors.email ? true : false}
               helperText={errors.email && errors.email.message}
@@ -86,7 +88,7 @@ function Contact(props) {
             <TextField
               variant="outlined"
               type="text"
-              label="Message"
+              label={t.enterMessage}
               name="message"
               multiline={true}
               rows={5}

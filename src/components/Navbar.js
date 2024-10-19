@@ -22,6 +22,7 @@ import Section from "components/Section";
 import { useAuth } from "util/auth";
 import { useDarkMode } from "util/theme";
 import Image from 'next/image';
+import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles((theme) => ({
   logo: {
@@ -43,6 +44,9 @@ function Navbar(props) {
   const darkMode = useDarkMode();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuState, setMenuState] = useState(null);
+
+  const { language, toggleLanguage, t } = useLanguage(); // Use language context
+
 
   // Use inverted logo if specified
   // and we are in dark mode
@@ -88,6 +92,10 @@ function Navbar(props) {
                   </Button>
                 </Link>
               )} */}
+                    {/* Language Toggle Button */}
+                    <Button color="inherit" onClick={toggleLanguage}>
+                    {language === 'en' ? 'العربية' : 'ENG'}
+              </Button>
 
               {auth.user && (
                 <>

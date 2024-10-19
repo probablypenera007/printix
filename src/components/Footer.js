@@ -13,6 +13,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Section from "components/Section";
 import { useDarkMode } from "util/theme";
 import Image from 'next/image';
+import { useLanguage} from "contexts/languageContext"; // Import language context
+
 
 const useStyles = makeStyles((theme) => ({
   sticky: {
@@ -46,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Footer(props) {
+  const { t } = useLanguage();
   const classes = useStyles();
 
   const darkMode = useDarkMode();
@@ -82,9 +85,9 @@ function Footer(props) {
               <Link href="/legal/terms-of-service" passHref={true}>
                 <LinkMui>Terms</LinkMui>
               </Link>
-              <Link href="/legal/privacy-policy" passHref={true}>
+              {/* <Link href="/legal/privacy-policy" passHref={true}>
                 <LinkMui>Privacy</LinkMui>
-              </Link>
+              </Link> */}
             </div>
           </Grid>
           <Grid item={true} xs={12} md={6}>
@@ -129,7 +132,7 @@ function Footer(props) {
                       Company
                     </Typography>
                   </ListItem>
-                  <Link href="/about" passHref={true}>
+                  {/* <Link href="/about" passHref={true}>
                     <ListItem
                       component="a"
                       button={true}
@@ -137,7 +140,7 @@ function Footer(props) {
                     >
                       <ListItemText>About</ListItemText>
                     </ListItem>
-                  </Link>
+                  </Link> */}
                   <Link href="/contact" passHref={true}>
                     <ListItem
                       component="a"
@@ -160,7 +163,7 @@ function Footer(props) {
                 </List>
               </Grid>
               <Grid item={true} xs={12} md={4}>
-                <List disablePadding={true}>
+                {/* <List disablePadding={true}>
                   <ListItem className={classes.listItem}>
                     <Typography
                       variant="overline"
@@ -217,7 +220,7 @@ function Footer(props) {
                     </ListItemIcon>
                     <ListItemText>Instagram</ListItemText>
                   </ListItem>
-                </List>
+                </List> */}
               </Grid>
             </Grid>
           </Grid>
