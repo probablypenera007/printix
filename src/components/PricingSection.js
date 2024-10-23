@@ -93,7 +93,7 @@ function PricingSection(props) {
                     href={
                       auth.user
                         ? `/purchase/plan1`
-                        : `/auth/signup?next=/purchase/plan1`
+                        : `/contact`
                     }
                     passHref={true}
                   >
@@ -137,7 +137,7 @@ function PricingSection(props) {
                     href={
                       auth.user
                         ? `/purchase/plan2`
-                        : `/auth/signup?next=/purchase/plan2`
+                        : `/contact`
                     }
                     passHref={true}
                   >
@@ -181,7 +181,7 @@ function PricingSection(props) {
                     href={
                       auth.user
                         ? `/purchase/plan3`
-                        : `/auth/signup?next=/purchase/plan3`
+                        : `/contact`
                     }
                     passHref={true}
                   >
