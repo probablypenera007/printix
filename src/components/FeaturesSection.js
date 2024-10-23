@@ -13,6 +13,7 @@ import Image from 'next/image';
 import { useLanguage } from "contexts/languageContext";
 
 
+
 const useStyles = makeStyles((theme) => ({
   gridItem: {
     // Add border that contrasts lightly with background color.
