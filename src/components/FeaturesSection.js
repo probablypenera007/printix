@@ -9,10 +9,8 @@ import { emphasize } from "@material-ui/core/styles/colorManipulator";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
 import AspectRatio from "components/AspectRatio";
-import Image from 'next/image';
+import Image from "next/image";
 import { useLanguage } from "contexts/languageContext";
-
-
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {
@@ -24,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageContainer: {
     margin: "0 auto",
-    maxWidth: "200px",
+    maxWidth: "100%",
     marginBottom: "30px",
     "& img": {
       width: "100%",
@@ -39,23 +37,23 @@ function FeaturesSection(props) {
   const items = [
     {
       title: t.environmentTitle, // Use translated text for Environment
-      body: t.environmentBody,  // Use the same for the body
-      image: "https://uploads.divjoy.com/undraw-fish_bowl_uu88.svg",
+      body: t.environmentBody, // Use the same for the body
+      image: "/mountain.png",
     },
     {
       title: t.versatilityTitle, // Translated text for Versatility
       body: t.versatilityBody,
-      image: "https://uploads.divjoy.com/undraw-directions_x53j.svg",
+      image: "/robot.png",
     },
     {
       title: t.expertTeamTitle, // Translated text for Expert Team
       body: t.expertTeamBody,
-      image: "https://uploads.divjoy.com/undraw-stability_ball_b4ia.svg",
+      image: "/woman.png",
     },
     {
       title: t.durablePrintsTitle, // Translated text for Durable Prints
       body: t.durablePrintsBody,
-      image: "https://uploads.divjoy.com/undraw-personal_settings_kihd.svg",
+      image: "/machine.png",
     },
   ];
 
