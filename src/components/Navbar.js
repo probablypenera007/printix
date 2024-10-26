@@ -21,7 +21,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Section from "components/Section";
 import { useAuth } from "util/auth";
 import { useDarkMode } from "util/theme";
-import Image from 'next/image';
+import Image from "next/image";
 import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles((theme) => ({
@@ -47,7 +47,6 @@ function Navbar(props) {
 
   const { language, toggleLanguage, t } = useLanguage(); // Use language context
 
-
   // Use inverted logo if specified
   // and we are in dark mode
   const logo =
@@ -70,11 +69,17 @@ function Navbar(props) {
           <Toolbar>
             <Link href="/">
               <a>
-              <Image src={logo} alt="Logo" className={classes.logo} width={100} height={25} />
+                <Image
+                  src={logo}
+                  alt="Logo"
+                  className={classes.logo}
+                  width={100}
+                  height={25}
+                />
               </a>
             </Link>
             <div className={classes.spacer} />
-            <Hidden smUp={true} implementation="css">
+            {/* <Hidden smUp={true} implementation="css">
               <IconButton
                 onClick={() => {
                   setDrawerOpen(true);
@@ -83,7 +88,7 @@ function Navbar(props) {
               >
                 <MenuIcon />
               </IconButton>
-            </Hidden>
+            </Hidden> */}
             <Hidden xsDown={true} implementation="css">
               {/* {!auth.user && (
                 <Link href="/auth/signin" passHref={true}>
@@ -92,9 +97,9 @@ function Navbar(props) {
                   </Button>
                 </Link>
               )} */}
-                    {/* Language Toggle Button */}
-                    <Button color="inherit" onClick={toggleLanguage}>
-                    {language === 'en' ? 'العربية' : 'ENG'}
+              {/* Language Toggle Button */}
+              <Button color="inherit" onClick={toggleLanguage}>
+                {language === "en" ? "العربية" : "ENG"}
               </Button>
 
               {auth.user && (
