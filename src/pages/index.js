@@ -58,10 +58,6 @@
 
 // export default IndexPage;
 
-
-
-
-
 import React from "react";
 import Meta from "components/Meta";
 import HeroSection from "components/HeroSection";
@@ -80,8 +76,8 @@ function IndexPage(props) {
         bgColor="primary"
         size="large"
         // Pass the video file instead of an image
-        bgVideo="/printix.m4vv"
-        bgImageOpacity={0.3}
+        bgVideo="/printix.mp4"
+        bgImageOpacity={0.7}
         title={t.mainPageTitle} // Translated title
         subtitle={t.mainPageSubtitle} // Translated subtitle
         buttonText={t.getStarted} // Translated button text
