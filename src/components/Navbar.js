@@ -93,6 +93,16 @@ function Navbar(props) {
               <Button color="inherit" onClick={toggleLanguage}>
                 {language === "en" ? "العربية" : "ENG"}
               </Button>
+
+              <IconButton
+                color="inherit"
+                onClick={darkMode.toggle}
+                style={{ opacity: 0.6 }}
+              >
+                {darkMode.value && <NightsStayIcon />}
+
+                {!darkMode.value && <WbSunnyIcon />}
+              </IconButton>
             </Hidden>
             <Hidden xsDown={true} implementation="css">
               {/* {!auth.user && (
