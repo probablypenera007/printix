@@ -89,6 +89,11 @@ function Navbar(props) {
                 <MenuIcon />
               </IconButton>
             </Hidden> */}
+            <Hidden smUp={true} implementation="css">
+              <Button color="inherit" onClick={toggleLanguage}>
+                {language === "en" ? "العربية" : "ENG"}
+              </Button>
+            </Hidden>
             <Hidden xsDown={true} implementation="css">
               {/* {!auth.user && (
                 <Link href="/auth/signin" passHref={true}>
