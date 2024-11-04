@@ -1,3 +1,111 @@
+// import React from "react";
+// import Container from "@material-ui/core/Container";
+// import Card from "@material-ui/core/Card";
+// import Grid from "@material-ui/core/Grid";
+// import Box from "@material-ui/core/Box";
+// import Typography from "@material-ui/core/Typography";
+// import { makeStyles } from "@material-ui/core/styles";
+// import Section from "components/Section";
+// import SectionHeader from "components/SectionHeader";
+// import AspectRatio from "components/AspectRatio";
+// import { useLanguage } from "contexts/languageContext";
+
+// const useStyles = makeStyles((theme) => ({
+//   gridItem: {
+//     textAlign: "center",
+//   },
+//   imageContainer: {
+//     margin: "0 auto",
+//     width: "100%", // Ensures image takes full width of container
+//     height: "auto",
+//     maxWidth: "280px", // Adjust to resize images as needed
+//     "& img": {
+//       width: "100%",
+//       height: "auto",
+//       objectFit: "contain", // Ensure images fit within container without being cropped
+//       border: "none", // Remove any borders around images
+//       boxShadow: "none", // Remove any shadow
+//     },
+//   },
+//   card: {
+//     backgroundColor: "transparent", // Make card background transparent
+//   },
+// }));
+
+// function FeaturesSection3(props) {
+//   const { t } = useLanguage();
+//   const classes = useStyles();
+
+//   const items = [
+//     {
+//       image: "/wood.png",
+//     },
+//     {
+//       image: "/brick.png",
+//     },
+//     {
+//       image: "/tiles.png",
+//     },
+//     {
+//       image: "/fabric.png",
+//     },
+//     {
+//       image: "/concrete.png",
+//     },
+//     {
+//       image: "/poster.png",
+//     },
+//     {
+//       image: "/metal.png",
+//     },
+//     {
+//       image: "/leather.png",
+//     },
+//   ];
+
+//   return (
+//     <Section
+//       bgColor={props.bgColor}
+//       size={props.size}
+//       bgImage={props.bgImage}
+//       bgImageOpacity={props.bgImageOpacity}
+//     >
+//       <Container>
+//         <SectionHeader
+//           title="Surfaces we print on" // Set fixed title
+//           size={4}
+//           textAlign="center"
+//         />
+//         <Card raised={false} className={classes.card}>
+//           <Grid container spacing={4} justify="center">
+//             {items.map((item, index) => (
+//               <Grid
+//                 item
+//                 xs={12}
+//                 sm={6}
+//                 md={3} // Set columns for large screens to 4 across
+//                 className={classes.gridItem}
+//                 key={index}
+//               >
+//                 <Box p={1}>
+//                   <div className={classes.imageContainer}>
+//                     <AspectRatio ratio={4 / 3}>
+//                       <img src={item.image} alt={`Surface ${index + 1}`} />
+//                     </AspectRatio>
+//                   </div>
+//                 </Box>
+//               </Grid>
+//             ))}
+//           </Grid>
+//         </Card>
+//       </Container>
+//     </Section>
+//   );
+// }
+
+// export default FeaturesSection3;
+
+
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
@@ -5,28 +113,35 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { emphasize } from "@material-ui/core/styles/colorManipulator";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
 import AspectRatio from "components/AspectRatio";
-import Image from "next/image";
 import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles((theme) => ({
+  section: {
+    backgroundColor: "#f5f5f5", // Set a very light gray background color for the section
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+  },
   gridItem: {
-    // Add border that contrasts lightly with background color.
-    // We use boxShadow so that it's hidden around outer edge
-    // due to container <Card> having overflow: hidden
-    boxShadow: `1px 1px 0 0 ${emphasize(theme.palette.background.paper, 0.08)}`,
     textAlign: "center",
   },
   imageContainer: {
     margin: "0 auto",
-    maxWidth: "100%",
-    marginBottom: "30px",
+    width: "100%", // Ensures image takes full width of container
+    height: "auto",
+    maxWidth: "280px", // Adjust to resize images as needed
     "& img": {
       width: "100%",
+      height: "auto",
+      objectFit: "contain", // Ensure images fit within container without being cropped
+      border: "none", // Remove any borders around images
+      boxShadow: "none", // Remove any shadow
     },
+  },
+  card: {
+    backgroundColor: "transparent", // Make card background transparent
   },
 }));
 
@@ -36,49 +151,34 @@ function FeaturesSection3(props) {
 
   const items = [
     {
-      title: t.environmentTitle, // Use translated text for Environment
-      body: t.environmentBody, // Use the same for the body
       image: "/wood.png",
     },
     {
-      title: t.versatilityTitle, // Translated text for Versatility
-      body: t.versatilityBody,
       image: "/brick.png",
     },
     {
-      title: t.expertTeamTitle, // Translated text for Expert Team
-      body: t.expertTeamBody,
       image: "/tiles.png",
     },
     {
-      title: t.durablePrintsTitle, // Translated text for Durable Prints
-      body: t.durablePrintsBody,
       image: "/fabric.png",
     },
     {
-        title: t.environmentTitle, // Use translated text for Environment
-        body: t.environmentBody, // Use the same for the body
-        image: "/concrete.png",
-      },
-      {
-        title: t.versatilityTitle, // Translated text for Versatility
-        body: t.versatilityBody,
-        image: "/poster.png",
-      },
-      {
-        title: t.expertTeamTitle, // Translated text for Expert Team
-        body: t.expertTeamBody,
-        image: "/metal.png",
-      },
-      {
-        title: t.durablePrintsTitle, // Translated text for Durable Prints
-        body: t.durablePrintsBody,
-        image: "/leather.png",
-      },
+      image: "/concrete.png",
+    },
+    {
+      image: "/poster.png",
+    },
+    {
+      image: "/metal.png",
+    },
+    {
+      image: "/leather.png",
+    },
   ];
 
   return (
     <Section
+      className={classes.section} // Apply the light gray background style here
       bgColor={props.bgColor}
       size={props.size}
       bgImage={props.bgImage}
@@ -86,31 +186,27 @@ function FeaturesSection3(props) {
     >
       <Container>
         <SectionHeader
-          title={t.whyChooseTitle}
-          subtitle={props.subtitle}
+          title="Surfaces we print on" // Set fixed title
           size={4}
           textAlign="center"
         />
-        <Card raised={false}>
-          <Grid container={true}>
+        <Card raised={false} className={classes.card}>
+          <Grid container spacing={4} justify="center">
             {items.map((item, index) => (
               <Grid
-                item={true}
+                item
                 xs={12}
-                md={6}
+                sm={6}
+                md={3} // Set columns for large screens to 4 across
                 className={classes.gridItem}
                 key={index}
               >
-                <Box p={6}>
+                <Box p={1}>
                   <div className={classes.imageContainer}>
                     <AspectRatio ratio={4 / 3}>
-                      <img src={item.image} alt={item.title} />
+                      <img src={item.image} alt={`Surface ${index + 1}`} />
                     </AspectRatio>
                   </div>
-                  <Typography variant="h5" gutterBottom={true}>
-                    {item.title}
-                  </Typography>
-                  <Typography variant="subtitle1">{item.body}</Typography>
                 </Box>
               </Grid>
             ))}
