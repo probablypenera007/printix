@@ -105,7 +105,6 @@
 
 // export default FeaturesSection3;
 
-
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
@@ -166,7 +165,7 @@ function FeaturesSection3(props) {
       image: "/concrete.png",
     },
     {
-      image: "/poster.png",
+      image: "/st-glass.png",
     },
     {
       image: "/metal.png",
