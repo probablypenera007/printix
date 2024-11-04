@@ -63,6 +63,9 @@ import Meta from "components/Meta";
 import HeroSection from "components/HeroSection";
 import FeaturesSection from "components/FeaturesSection";
 import NewsletterSection from "components/NewsletterSection";
+import FeaturesSection2 from "components/FeaturesSection2";
+import FeaturesSection3 from "components/FeatureSection3";
+import Gallery from "components/Gallery";
 import CtaSection from "components/CtaSection";
 import { useLanguage } from "contexts/languageContext";
 
@@ -84,12 +87,15 @@ function IndexPage(props) {
         buttonColor="default"
         buttonPath="/pricing"
       />
+      <FeaturesSection2 />
       <FeaturesSection
         bgColor="default"
         size="medium"
         title={t.featuresTitle} // Translated features title
         subtitle={t.featuresSubtitle} // Translated features subtitle
       />
+      <FeaturesSection3 />
+      <Gallery/>
       <NewsletterSection
         bgColor="light"
         size="medium"
