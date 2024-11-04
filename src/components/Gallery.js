@@ -94,9 +94,6 @@
 
 // export default Gallery;
 
-
-
-
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
@@ -145,19 +142,19 @@ function Gallery(props) {
 
   const items = [
     {
-      image: "/truck.png",
+      image: "/notable-1.jpeg",
+    },
+    {
+      image: "/notable-2.jpeg",
+    },
+    {
+      image: "/notable-3.jpeg",
     },
     {
       image: "/astronaut.png",
     },
     {
-      image: "/mandala.png",
-    },
-    {
       image: "/rainforest.png",
-    },
-    {
-      image: "/bird.png",
     },
   ];
 

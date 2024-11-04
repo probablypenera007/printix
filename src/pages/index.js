@@ -79,7 +79,7 @@ function IndexPage(props) {
         bgColor="primary"
         size="large"
         // Pass the video file instead of an image
-        bgVideo="/printix.mp4"
+        bgVideo="/mainpagevid.mp4"
         bgImageOpacity={0.7}
         title={t.mainPageTitle} // Translated title
         subtitle={t.mainPageSubtitle} // Translated subtitle
@@ -95,7 +95,7 @@ function IndexPage(props) {
         subtitle={t.featuresSubtitle} // Translated features subtitle
       />
       <FeaturesSection3 />
-      <Gallery/>
+      <Gallery />
       <NewsletterSection
         bgColor="light"
         size="medium"

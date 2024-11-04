@@ -13,7 +13,7 @@ function HeroSection(props) {
   // Set the playback speed when the component mounts
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 4; // Set playback speed to 16
+      videoRef.current.playbackRate = 2; // Set playback speed to 16
     }
   }, [props.bgVideo]); // Run effect when bgVideo changes
 
